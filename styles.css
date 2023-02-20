@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* body{
+    display: flex;
+    flex-direction: column;
+} */
+
+ul{
+    list-style-type: none;
+    padding: 0 1rem 0 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: #F6F9FE;
+    display: flex;
+    gap: 1.5rem;
+    width: 35rem;
+    justify-content: flex-end;
+    /* border: solid red 10px; */
+
+}
+
+a{
+    text-decoration: none;
+    color: #F6F9FE;
+}
+
+h1{
+    padding: 0;
+    margin: 0;
+}
+
+i {
+    color: #ffc922;
+}
+
+section{
+    /* border: solid red 10px; */
+}
+
+/* Header Section */
+.hero{
+    min-height: 90vh;
+    background-image: url(images/pexels-arthouse-studio-4534200.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.logo{
+    display: flex;
+    padding: 1rem;
+    width: 35rem;
+    gap: 0.5rem;
+    /* border: solid red 10px; */
+    
+}
+
+.header h1{
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    color: #235e2e;
+}
+
+.hero-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 7rem;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.hero-text{
+    /* border: solid red 10px; */
+    max-width: 28rem;
+    flex: 1 1 auto;
+}
+
+.hero-img{
+    display: flex;
+    /* border: solid red 10px; */
+    max-width: 35rem;
+    max-height: auto;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.img-1{
+    max-width: 100%;
+    border-radius: 10px;
+}
+ 
+.hero-text h1{
+    font-size: 48px;
+    font-weight: 900;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.hero-text p{
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+}
+
+.amber{
+    color: #ffc922;
+}
+
+.hero-text button{
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    background-color: #235e2e;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    height: 48px;
+    padding: 2px 24px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background: #ffc922;
+    color: black; 
+}
