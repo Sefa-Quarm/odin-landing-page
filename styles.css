@@ -76,7 +76,7 @@ ul {
 .logo{
     display: flex;
     padding: 1rem;
-    width: 33rem;
+    width: 35rem;
     gap: 0.5rem;
     /* border: solid red 10px; */
 }
@@ -92,9 +92,8 @@ ul {
     justify-content: center;
     align-items: center;
     width: 60vw;
-    margin: 0 auto;
-    gap: 6rem;
-    margin-top: 5rem;
+    gap: 5rem;
+    margin: 6.5rem auto;
     padding: 2.5rem 1.5rem;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -144,10 +143,10 @@ ul {
 .hero-text button{
     font-family: 'Lato', sans-serif;
     border-radius: 10px;
-    background-color: #235e2e;
+    background-color: #ffc922;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
-    color: #fff;
+    color: black;
     font-size: 18px;
     font-weight: 500;
     height: 48px;
@@ -158,8 +157,8 @@ ul {
 }
 
 .hero-text button:hover {
-    background: #ffc922;
-    color: black; 
+    background: #235e2e;
+    color: #F6F9FE; 
 }
 
         /* < !-- Information Section --> */
@@ -197,8 +196,8 @@ ul {
 }
 
 .card-img{
-    width: 15rem;
-    height: 15rem;
+    width: 100%;
+    height: 100%;
 }
 
 .card-img img{
