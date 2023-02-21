@@ -162,11 +162,12 @@ section{
 
 .cards {
     display: flex;
-    gap: 2rem;
+    gap: 2.8rem;
     justify-content: center;
     align-items: center;
-        
-                }
+    margin-bottom: 7rem;
+}
+
 .information h2{
     color: #235e2e;
     font-family: 'Lato', sans-serif;
@@ -178,15 +179,31 @@ section{
 
 
 .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 15rem;
     height: 20rem;
-    border: solid 10px red;
+    border-radius: 10px;
+    background: #e0e0e0;
+    box-shadow: 24px 24px 49px #bebebe,-24px -24px 49px #ffffff;
+    overflow: hidden;
 }
 
 .card-img{
     width: 15rem;
+    height: 15rem;
 }
 
 .card-img img{
     width: 100%;
+    height: 100%;
+}
+
+.card-text{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    padding: 1.5rem;
 }
