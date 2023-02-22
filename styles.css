@@ -14,7 +14,7 @@
 
 a{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 h1{
@@ -27,23 +27,24 @@ i {
 }
 
 section{
-    /* border: solid red 10px; */
+    /* border: solid red 10px; ffc922 */
 }
 
 /* Header Section */
 .hero{
-    min-height: 90vh;
+    min-height: 95vh;
     background-color: #fff;
     background-image:
-    radial-gradient(at top right, #fff, transparent),
-    radial-gradient(at top left, #ffc922, transparent),
-    radial-gradient(at bottom left, #84694e, transparent);
+    radial-gradient(at top right, skyblue, transparent),
+    radial-gradient(at top left, #235e2e, transparent),
+    radial-gradient(at bottom left, #ffc922, transparent);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
     position: relative;
     isolation: isolate; /* This makes sure the Z index is limited to the Div's "stacking context" so it doesn't go completely behind everything else on the website */
 }
+
 
 .hero::after{ /* To reduce the background opacity */
     content: ''; 
@@ -70,7 +71,7 @@ ul {
     padding: 0 1rem 0 0;
     margin: 0;
     font-family: 'Lato', sans-serif;
-    font-size: 18px;
+    font-size: 21px;
     display: flex;
     gap: 2rem;
     /* border: solid red 10px; */
@@ -90,7 +91,7 @@ li::after {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #235e2e;
+    background-color: #fff;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -111,21 +112,21 @@ li:hover:after {
 .header h1{
     font-family: 'Lato', sans-serif;
     font-size: 24px;
-    color: black;
+    color: #fff;
 }
 
 .hero-content{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 70vw;
-    gap: 5rem;
+    gap: 2rem;
     margin: 5rem auto;
-    padding: 2.5rem 1.5rem;
-    background: rgba(255, 255, 255, 0.25);
+    padding: 2.5rem 5rem;
+    background: rgba(255, 255, 255, 0.65);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 15px;
 }
@@ -147,15 +148,33 @@ li:hover:after {
 
 .img-1{
     max-width: 100%;
-    /* border-radius: 10px; */
 }
  
+
 .hero-text h1{
     font-size: 72px;
     font-weight: 900;
     color: black;
     font-family: 'Lato', sans-serif;
     margin-bottom: 1rem;
+}
+
+
+.slide-in-left {
+    animation: slide-in-left 0.6s ease-out 0.1s both;
+}
+
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .hero-text p{
@@ -168,9 +187,24 @@ li:hover:after {
 .text-gradient{
     background: -webkit-linear-gradient(-300deg, rgba(2, 0, 36, 1) 0%, rgba(37, 199, 49, 1) 35%, rgba(34, 200, 68, 1) 60%, rgba(255, 198, 0, 1) 100%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent
-    
+    -webkit-text-fill-color: transparent;
+    animation: reveal-in-blurred 0.65s ease-out 0.3s both;
 }
+
+@keyframes reveal-in-blurred {
+    0% {
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 
 .hero-text button{
     font-family: 'Lato', sans-serif;
@@ -237,13 +271,13 @@ li:hover:after {
 
 .card-img:hover img{
     transform: scale(1.5);
-    transition: 0.5s ease;
     cursor: pointer;
 }
 
 .card-img img {
     width: 100%;
     height: 100%;
+    transition: 0.6s ease;
 }
 
 .card-text{
@@ -258,9 +292,110 @@ li:hover:after {
 
 /* Testimonials Section */
 
+.testimonial-section{
+    position: relative;
+    min-height: 70vh;
+}
+/* For Animated Aurora Background */
+@keyframes fly {
+    100% {
+        transform: rotate(1turn) translate(100px) rotate(-1turn);
+    }
+}
+
+@keyframes flyPlus {
+    100% {
+        transform: rotate(-1turn) translate(100px) rotate(1turn);
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 70vh;
+    background: skyblue;
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 40px; */
+}
+
+.base {
+    position: absolute;
+    filter: blur(60px);
+    opacity: 0.8;
+    scale: 2;
+}
+
+.one {
+    border-radius: 100%;
+    width: 600px;
+    height: 600px;
+    background-color: #235e2e;
+    left: -50px;
+    top: -300px;
+    z-index: 3;
+    animation: fly 11s linear infinite;
+    transform: rotate(0) translate(80px) rotate(0);
+}
+
+.two {
+    width: 500px;
+    height: 800px;
+    background-color: #fff;
+    bottom: -30px;
+    left: -80px;
+}
+
+.three {
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+    bottom: -80px;
+    right: -100px;
+    background-color: #1097e6;
+    animation: flyPlus 6s linear infinite;
+    transform: rotate(0) translate(100px) rotate(0);
+}
+
+
+
 .testimonials{
-    min-height: 55vh;
+    height: 50vh;
+    width: 70vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
+    position: absolute;
+    z-index: 5;
+    isolation: isolate;
+    left: 0;       /*Center Position Absolute Div */
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(231, 230, 230, 0.6);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13px);
+    -webkit-backdrop-filter: blur(13px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.459);
+}
+
+.quote{
+    font-family: 'Lato',sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    color: black;
+    padding: 0 5rem;
+    font-style: italic;
+
+}
+
+
+.speaker{
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    align-self: flex-end;
 }
