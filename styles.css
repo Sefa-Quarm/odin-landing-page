@@ -37,7 +37,7 @@ section{
     background-image:
     radial-gradient(at top right, skyblue, transparent),
     radial-gradient(at top left, #235e2e, transparent),
-    radial-gradient(at bottom left, #ffc922, transparent);
+    radial-gradient(at bottom left, #fff, transparent);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     overflow: hidden;
@@ -144,6 +144,37 @@ li:hover:after {
     flex: 1 1 auto;
     overflow: hidden;
     border-radius: 15px;
+    -webkit-animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+
+}
+
+@-webkit-keyframes tilt-in {
+    0% {
+        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes tilt-in {
+    0% {
+        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
 }
 
 .img-1{
@@ -161,7 +192,7 @@ li:hover:after {
 
 
 .slide-in-left {
-    animation: slide-in-left 0.6s ease-out 0.1s both;
+    animation: slide-in-left 0.9s ease-out both;
 }
 
 
@@ -188,7 +219,7 @@ li:hover:after {
     background: -webkit-linear-gradient(-300deg, rgba(2, 0, 36, 1) 0%, rgba(37, 199, 49, 1) 35%, rgba(34, 200, 68, 1) 60%, rgba(255, 198, 0, 1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: reveal-in-blurred 0.65s ease-out 0.3s both;
+    animation: reveal-in-blurred 0.8s ease-out 0.6s both;
 }
 
 @keyframes reveal-in-blurred {
@@ -220,12 +251,88 @@ li:hover:after {
     width: auto;
     text-align: center;
     cursor: pointer;
+    -webkit-animation: wobble 0.8s 2s both;
+    animation: wobble 0.8s 2s both;
 }
 
 .hero-text button:hover {
     background: #235e2e;
     color: #F6F9FE; 
 }
+
+
+@-webkit-keyframes wobble {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
+@keyframes wobble-hor-bottom {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+    }
+
+    15% {
+        -webkit-transform: translateX(-30px) rotate(-6deg);
+        transform: translateX(-30px) rotate(-6deg);
+    }
+
+    30% {
+        -webkit-transform: translateX(15px) rotate(6deg);
+        transform: translateX(15px) rotate(6deg);
+    }
+
+    45% {
+        -webkit-transform: translateX(-15px) rotate(-3.6deg);
+        transform: translateX(-15px) rotate(-3.6deg);
+    }
+
+    60% {
+        -webkit-transform: translateX(9px) rotate(2.4deg);
+        transform: translateX(9px) rotate(2.4deg);
+    }
+
+    75% {
+        -webkit-transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-6px) rotate(-1.2deg);
+    }
+}
+
 
         /* < !-- Information Section --> */
 
@@ -384,18 +491,18 @@ li:hover:after {
 
 .quote{
     font-family: 'Lato',sans-serif;
-    font-size: 38px;
-    font-weight: 400;
+    max-width: 63vw;
+    font-size: 42px;
+    font-weight: 600;
     color: black;
     padding: 0 5rem;
     font-style: italic;
-
 }
 
 
 .speaker{
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     align-self: flex-end;
 }
