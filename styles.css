@@ -4,13 +4,9 @@
     margin: 0;
 }
 
-/* body{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
-
+p, h1, h2, h3, a, button {
+    font-family: 'Lato', sans-serif;
+}
 
 a{
     text-decoration: none;
@@ -26,17 +22,32 @@ i {
     color: #235e2e;
 }
 
-section{
-    /* border: solid red 10px; ffc922 */
+span {
+    color: #08B0D5;
+}
+
+button{
+    border-radius: 10px;
+    background-color: #fff;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+    height: 48px;
+    padding: 2px 24px;
+    width: auto;
+    text-align: center;
+    cursor: pointer;
 }
 
 /* Header Section */
-.hero{
+#hero{
     min-height: 95vh;
     background-color: #fff;
     background-image:
     radial-gradient(at top right, skyblue, transparent),
-    radial-gradient(at top left, #235e2e, transparent),
+    radial-gradient(at top left, #e0e0e0, transparent),
     radial-gradient(at bottom left, #fff, transparent);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -46,7 +57,7 @@ section{
 }
 
 
-.hero::after{ /* To reduce the background opacity */
+#hero::after{ /* To reduce the background opacity */
     content: ''; 
     position: absolute;
     z-index: -1;
@@ -110,7 +121,6 @@ li:hover:after {
 }
 
 .header h1{
-    font-family: 'Lato', sans-serif;
     font-size: 24px;
     color: #fff;
 }
@@ -186,7 +196,6 @@ li:hover:after {
     font-size: 72px;
     font-weight: 900;
     color: black;
-    font-family: 'Lato', sans-serif;
     margin-bottom: 1rem;
 }
 
@@ -209,7 +218,6 @@ li:hover:after {
 }
 
 .hero-text p{
-    font-family: 'Lato', sans-serif;
     margin-bottom: 1.5rem;
     color: black;
     font-size: 18px;
@@ -238,21 +246,9 @@ li:hover:after {
 
 
 .hero-text button{
-    font-family: 'Lato', sans-serif;
-    border-radius: 10px;
-    background-color: #fff;
-    border-style: none;
-    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
-    color: black;
-    font-size: 18px;
-    font-weight: 500;
-    height: 48px;
-    padding: 2px 24px;
-    width: auto;
-    text-align: center;
-    cursor: pointer;
-    -webkit-animation: wobble 0.8s 2s both;
-    animation: wobble 0.8s 2s both;
+    
+    -webkit-animation: wobble 0.8s 2.3s both;
+    animation: wobble 0.8s 3s both;
 }
 
 .hero-text button:hover {
@@ -297,7 +293,7 @@ li:hover:after {
     }
 }
 
-@keyframes wobble-hor-bottom {
+@keyframes wobble {
 
     0%,
     100% {
@@ -336,6 +332,11 @@ li:hover:after {
 
         /* < !-- Information Section --> */
 
+
+#information{
+    background-color: #FAF9F6;
+}
+
 .cards {
     display: flex;
     gap: 2.8rem;
@@ -346,13 +347,12 @@ li:hover:after {
     flex-wrap: wrap;
 }
 
-.information h2{
+#information h2{
     color: #235e2e;
-    font-family: 'Lato', sans-serif;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 
@@ -363,7 +363,13 @@ li:hover:after {
     width: 17rem;
     height: 23rem;
     border-radius: 6px;
-    background: #e0e0e0;
+    background-color: #fff;
+    background-image:
+    radial-gradient(at top right, skyblue, transparent),
+    radial-gradient(at top left, #e0e0e0, transparent),
+    radial-gradient(at bottom left, #fff, transparent);
+
+    /* background: #e0e0e0; */
     box-shadow: 24px 24px 49px #bebebe,-24px -24px 49px #ffffff;
     overflow: hidden;
 }
@@ -388,7 +394,6 @@ li:hover:after {
 }
 
 .card-text{
-    font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 400;
     text-align: center;
@@ -397,7 +402,13 @@ li:hover:after {
 
 
 
+
+
+
 /* Testimonials Section */
+
+
+
 
 .testimonial-section{
     position: relative;
@@ -419,7 +430,7 @@ li:hover:after {
 .wrapper {
     width: 100%;
     min-height: 70vh;
-    background: skyblue;
+    background: black;
     position: relative;
     overflow: hidden;
     /* border-radius: 40px; */
@@ -429,14 +440,14 @@ li:hover:after {
     position: absolute;
     filter: blur(60px);
     opacity: 0.8;
-    scale: 2;
+    scale: 3;
 }
 
 .one {
     border-radius: 100%;
     width: 600px;
     height: 600px;
-    background-color: #235e2e;
+    background-color: #e0e0e0;
     left: -50px;
     top: -300px;
     z-index: 3;
@@ -447,7 +458,7 @@ li:hover:after {
 .two {
     width: 500px;
     height: 800px;
-    background-color: #fff;
+    background-color: skyblue;
     bottom: -30px;
     left: -80px;
 }
@@ -467,42 +478,99 @@ li:hover:after {
 
 .testimonials{
     height: 50vh;
-    width: 70vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
     position: absolute;
     z-index: 5;
     isolation: isolate;
-    left: 0;       /*Center Position Absolute Div */
+    left: 0;       /* to Center Position: absolute Div */
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
-    background: rgba(231, 230, 230, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(13px);
     -webkit-backdrop-filter: blur(13px);
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.459);
 }
 
 .quote{
-    font-family: 'Lato',sans-serif;
     max-width: 63vw;
     font-size: 42px;
-    font-weight: 600;
-    color: black;
+    font-weight: 300;
+    color: #fff;
     padding: 0 5rem;
     font-style: italic;
 }
 
-
 .speaker{
-    font-family: 'Lato', sans-serif;
-    font-size: 18px;
-    font-weight: 800;
     align-self: flex-end;
+    margin-right: 10rem;
+}
+
+.speaker p{
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+
+
+/* Cta Section */
+
+#cta{
+    min-height: 40vh;
+}
+
+.cta-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    width: 60vw;
+    height: 30vh;
+    margin: 5.4rem auto;
+    background-image: url(images/tobias-mrzyk-iuqmGmst5Po-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
+    position: relative;
+    isolation: isolate;
+}
+
+.cta-container::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    filter: blur(100px);
+    background: black;
+    border-radius: 90px;
+    opacity: .9;
+}
+
+.cta-container h2{
+    color: #fff;
+    margin: 1rem 0;
+    font-weight: 900;
+    font-size: 35px;
+}
+
+.cta-container p{
+    font-size: 18px;
+}
+
+.cta-container span{
+    color: #08B0D5;
+}
+
+.cta-container button{
+    background-color: transparent;
+    border: 3px solid #fff;
+    color: #fff;
 }
