@@ -334,7 +334,7 @@ li:hover:after {
 
 
 #information{
-    background-color: #FAF9F6;
+    background-color: #e8e8e8;
 }
 
 .cards {
@@ -342,17 +342,17 @@ li:hover:after {
     gap: 2.8rem;
     justify-content: center;
     align-items: flex-start;
-    margin: 4rem 0;
+    padding: 4rem 0;
     min-height: 60vh;
     flex-wrap: wrap;
 }
 
 #information h2{
-    color: #235e2e;
+    color: #08B0D5;
     font-size: 36px;
     font-weight: 900;
     text-align: center;
-    margin-top: 6rem;
+    padding-top: 6rem;
 }
 
 
@@ -364,12 +364,6 @@ li:hover:after {
     height: 23rem;
     border-radius: 6px;
     background-color: #fff;
-    background-image:
-    radial-gradient(at top right, skyblue, transparent),
-    radial-gradient(at top left, #e0e0e0, transparent),
-    radial-gradient(at bottom left, #fff, transparent);
-
-    /* background: #e0e0e0; */
     box-shadow: 24px 24px 49px #bebebe,-24px -24px 49px #ffffff;
     overflow: hidden;
 }
@@ -546,7 +540,7 @@ li:hover:after {
 .cta-container::after{
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: -2;
     inset: 0;
     filter: blur(100px);
     background: black;
@@ -571,6 +565,33 @@ li:hover:after {
 
 .cta-container button{
     background-color: transparent;
-    border: 3px solid #fff;
-    color: #fff;
+    border: 2px solid #08B0D5;
+    color: #08B0D5;
+    overflow: hidden;
+    position: relative;
+}
+
+.cta-container button::before {
+    position: absolute;
+    content: "";
+    background: #08B0D5;
+    width: 380px;
+    height: 150px;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.cta-container button:hover {
+    color: white;
+}
+
+.cta-container button:before {
+    top: 100%;
+    left: 100%;
+    transition: .5s all;
+}
+
+.cta-container button:hover::before {
+    top: -30px;
+    left: -40px;
 }
