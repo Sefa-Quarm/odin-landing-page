@@ -14,7 +14,7 @@
 
 a{
     text-decoration: none;
-    color: #F6F9FE;
+    color: black;
 }
 
 h1{
@@ -33,9 +33,14 @@ section{
 /* Header Section */
 .hero{
     min-height: 90vh;
-    background-image: url(images/pexels-arthouse-studio-4534200.jpg);
-    background-size: cover;
-    background-position: center;
+    background-color: #fff;
+    background-image:
+    radial-gradient(at top right, #fff, transparent),
+    radial-gradient(at top left, #ffc922, transparent),
+    radial-gradient(at bottom left, #84694e, transparent);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    overflow: hidden;
     position: relative;
     isolation: isolate; /* This makes sure the Z index is limited to the Div's "stacking context" so it doesn't go completely behind everything else on the website */
 }
@@ -45,17 +50,19 @@ section{
     position: absolute;
     z-index: -1;
     inset: 0;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(300deg, rgba(2, 0, 36, 1) 0%, rgba(37, 199, 49, 1) 35%, rgba(34, 200, 68, 1) 60%, rgba(255, 198, 0, 1) 100%);
-    opacity: .65;
+    filter: blur(100px);
+    background: black;
+    border-radius: 90px;
+    opacity: .15;
 
 }
 
 .header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 3.6rem;
+    padding: 1rem 3rem;
 }
 
 ul {
@@ -64,19 +71,39 @@ ul {
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
-    color: #F6F9FE;
     display: flex;
     gap: 2rem;
-    width: 35rem;
-    justify-content: flex-end;
     /* border: solid red 10px; */
-
 }
+
+li{
+    display: inline-block;
+    position: relative;
+    /* color: #0087ca; */
+}
+
+li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #235e2e;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+li:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
 
 .logo{
     display: flex;
     padding: 1rem;
-    width: 35rem;
     gap: 0.5rem;
     /* border: solid red 10px; */
 }
@@ -84,16 +111,16 @@ ul {
 .header h1{
     font-family: 'Lato', sans-serif;
     font-size: 24px;
-    color: #fff;
+    color: black;
 }
 
 .hero-content{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60vw;
+    width: 70vw;
     gap: 5rem;
-    margin: 6.5rem auto;
+    margin: 5rem auto;
     padding: 2.5rem 1.5rem;
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
@@ -124,8 +151,9 @@ ul {
 }
  
 .hero-text h1{
-    font-size: 48px;
+    font-size: 72px;
     font-weight: 900;
+    color: black;
     font-family: 'Lato', sans-serif;
     margin-bottom: 1rem;
 }
@@ -133,17 +161,21 @@ ul {
 .hero-text p{
     font-family: 'Lato', sans-serif;
     margin-bottom: 1.5rem;
+    color: black;
     font-size: 18px;
 }
 
-.amber{
-    color: #ffc922;
+.text-gradient{
+    background: -webkit-linear-gradient(-300deg, rgba(2, 0, 36, 1) 0%, rgba(37, 199, 49, 1) 35%, rgba(34, 200, 68, 1) 60%, rgba(255, 198, 0, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+    
 }
 
 .hero-text button{
     font-family: 'Lato', sans-serif;
     border-radius: 10px;
-    background-color: #ffc922;
+    background-color: #fff;
     border-style: none;
     box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px, rgba(0, 0, 0, .14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
     color: black;
@@ -168,7 +200,7 @@ ul {
     gap: 2.8rem;
     justify-content: center;
     align-items: flex-start;
-    margin-top: 5rem;
+    margin: 4rem 0;
     min-height: 60vh;
     flex-wrap: wrap;
 }
@@ -179,7 +211,7 @@ ul {
     font-size: 36px;
     font-weight: 900;
     text-align: center;
-    margin: 3rem 0;
+    margin-top: 3rem;
 }
 
 
@@ -187,8 +219,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 15rem;
-    height: 20rem;
+    width: 17rem;
+    height: 23rem;
     border-radius: 6px;
     background: #e0e0e0;
     box-shadow: 24px 24px 49px #bebebe,-24px -24px 49px #ffffff;
@@ -198,9 +230,18 @@ ul {
 .card-img{
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
-.card-img img{
+
+
+.card-img:hover img{
+    transform: scale(1.5);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.card-img img {
     width: 100%;
     height: 100%;
 }
@@ -211,4 +252,15 @@ ul {
     font-weight: 400;
     text-align: center;
     padding: 1.5rem;
+}
+
+
+
+/* Testimonials Section */
+
+.testimonials{
+    min-height: 55vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
