@@ -2,10 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Lato', sans-serif;
 }
 
 p, h1, h2, h3, a, button {
-    font-family: 'Lato', sans-serif;
+    /* font-family: 'Lato', sans-serif; */
 }
 
 a{
@@ -16,6 +17,11 @@ a{
 h1{
     padding: 0;
     margin: 0;
+}
+
+body{
+    background-color: #fff;
+    color: #fff;
 }
 
 i {
@@ -370,6 +376,10 @@ li:hover:after {
     background-color: #fff;
     box-shadow: 24px 24px 49px #bebebe,-24px -24px 49px #ffffff;
     overflow: hidden;
+}
+
+.card p{
+    color: black;
 }
 
 .card-img{
