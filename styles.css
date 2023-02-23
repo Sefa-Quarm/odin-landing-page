@@ -44,7 +44,7 @@ button{
 
 /* Header Section */
 #hero{
-    min-height: 100vh;
+    height: 100vh;
     background-color: #fff;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
     background-image:
@@ -130,7 +130,8 @@ li:hover:after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 70vw;
+    max-height: 69vh;
+    width: 60vw;
     gap: 2rem;
     margin: 5rem auto;
     padding: 2.5rem 5rem;
@@ -144,8 +145,6 @@ li:hover:after {
 }
 
 .hero-text{
-    /* border: solid red 10px; */
-    max-width: 28rem;
     flex: 1 1 auto;
 }
 
@@ -338,7 +337,7 @@ li:hover:after {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
     clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
     margin-top: -50px;
-    min-height: 100vh;
+    min-height: 80vh;
 }
 
 
@@ -348,7 +347,7 @@ li:hover:after {
     justify-content: center;
     align-items: flex-start;
     padding: 4rem 0;
-    min-height: 90vh;
+    /* min-height: 90vh; */
     flex-wrap: wrap;
 }
 
@@ -411,7 +410,7 @@ li:hover:after {
 
 #testimonial-section{
     position: relative;
-    min-height: 120vh;
+    min-height: 100vh;
     clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
     margin-top: -50px;
         
@@ -439,7 +438,7 @@ li:hover:after {
 
 .wrapper {
     width: 100%;
-    min-height: 120vh;
+    min-height: 100vh;
     background: black;
     position: relative;
     overflow: hidden;
