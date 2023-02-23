@@ -44,7 +44,7 @@ button{
 
 /* Header Section */
 #hero{
-    min-height: 95vh;
+    min-height: 100vh;
     background-color: #fff;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
     background-image:
@@ -149,58 +149,11 @@ li:hover:after {
     flex: 1 1 auto;
 }
 
-.hero-img{
-    display: flex;
-    /* border: solid red 10px; */
-    max-width: 35rem;
-    flex: 1 1 auto;
-    overflow: hidden;
-    border-radius: 15px;
-    -webkit-animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
-    animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
-
-}
-
-@-webkit-keyframes tilt-in {
-    0% {
-        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
-        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-        opacity: 1;
-    }
-}
-
-@keyframes tilt-in {
-    0% {
-        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
-        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
-        opacity: 1;
-    }
-}
-
-.img-1{
-    max-width: 100%;
-}
- 
-
-.hero-text h1{
+.hero-text h1 {
     font-size: 72px;
     font-weight: 900;
-    color: black;
     margin-bottom: 1rem;
 }
-
 
 .slide-in-left {
     animation: slide-in-left 0.9s ease-out both;
@@ -331,6 +284,52 @@ li:hover:after {
 }
 
 
+
+.hero-img{
+    display: flex;
+    /* border: solid red 10px; */
+    max-width: 35rem;
+    flex: 1 1 auto;
+    overflow: hidden;
+    border-radius: 15px;
+    -webkit-animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+    animation: tilt-in 0.6s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.3s both;
+
+}
+
+@-webkit-keyframes tilt-in {
+    0% {
+        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes tilt-in {
+    0% {
+        -webkit-transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        transform: rotateY(-20deg) rotateX(35deg) translate(-300px, -300px) skew(35deg, -10deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        transform: rotateY(0) rotateX(0deg) translate(0, 0) skew(0deg, 0deg);
+        opacity: 1;
+    }
+}
+
+.img-1{
+    max-width: 100%;
+}
+ 
+
         /* < !-- Information Section --> */
 
 
@@ -339,6 +338,7 @@ li:hover:after {
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 50px), 50% 100%, 0 calc(100% - 50px));
     clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
     margin-top: -50px;
+    min-height: 100vh;
 }
 
 
@@ -348,7 +348,7 @@ li:hover:after {
     justify-content: center;
     align-items: flex-start;
     padding: 4rem 0;
-    min-height: 60vh;
+    min-height: 90vh;
     flex-wrap: wrap;
 }
 
@@ -411,7 +411,7 @@ li:hover:after {
 
 #testimonial-section{
     position: relative;
-    min-height: 100vh;
+    min-height: 120vh;
     clip-path: polygon(0 0, 50% 50px, 100% 0, 100% 100%, 0 100%);
     margin-top: -50px;
         
@@ -439,7 +439,7 @@ li:hover:after {
 
 .wrapper {
     width: 100%;
-    min-height: 100vh;
+    min-height: 120vh;
     background: black;
     position: relative;
     overflow: hidden;
@@ -541,6 +541,8 @@ li:hover:after {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
     color: #fff;
     width: 60vw;
     height: 30vh;
@@ -585,7 +587,7 @@ li:hover:after {
     color: #08B0D5;
     overflow: hidden;
     position: relative;
-    transition: all 0.4s;
+    transition: all 0.3s;
 }
 
 .cta-container button::before {
@@ -598,7 +600,7 @@ li:hover:after {
     border-radius: 50%;
     top: 100%;
     left: 100%;
-    transition: 0.4s all;
+    transition: 0.3s all;
 }
 
 .cta-container button:hover {
