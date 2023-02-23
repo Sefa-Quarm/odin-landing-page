@@ -66,7 +66,6 @@ button{
     background: black;
     border-radius: 90px;
     opacity: .15;
-
 }
 
 .header{
@@ -139,6 +138,7 @@ li:hover:after {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 15px;
+    
 }
 
 .hero-text{
@@ -495,7 +495,7 @@ li:hover:after {
 
 .quote{
     max-width: 63vw;
-    font-size: 42px;
+    font-size: 36px;
     font-weight: 300;
     color: #fff;
     padding: 0 5rem;
@@ -583,15 +583,43 @@ li:hover:after {
 
 .cta-container button:hover {
     color: white;
+    border: 2px solid white;
 }
 
 .cta-container button:before {
     top: 100%;
     left: 100%;
-    transition: .5s all;
+    transition: .3s all;
 }
 
 .cta-container button:hover::before {
     top: -30px;
     left: -40px;
+}
+
+
+
+/* Footer Section */
+
+#footer{
+    min-height: 10vh;
+    width: 100%;
+    background-color: #0c0c0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#footer p {
+    color: #fff;
+    font-size: 1rem;
+}
+
+#footer a{
+    font-weight: 600;
+}
+
+#footer a:hover{
+    color: #08B0D5;
 }
